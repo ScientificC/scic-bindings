@@ -1,12 +1,12 @@
 #!/bin/bash
 
-. ../scripts/flags-declares.sh
+. ../scripts/flags/declares.sh
 
 variables["-ns"]="namespace";
 variables["-p"]="path"
 variables["-o"]="output"
 
-. ../scripts/flags-arguments.sh
+. ../scripts/flags/arguments.sh
 
 namespace=${namespace:-"scic"}
 path=${path:-"."}

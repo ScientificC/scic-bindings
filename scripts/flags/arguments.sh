@@ -11,9 +11,9 @@ do
     else argument_label=${arguments[$prev_index]}
   fi
 
-  if [[ -n $argument_label ]] ; then
+  if [[ -n $argument_label ]]; then
     # this if block only evaluates to true if the argument label exists in the variables array
-    if [[ -n ${variables[$argument_label]} ]] ; then
+    if [[ -n ${variables[$argument_label]} ]]; then
       # dynamically creating variables names using declare
       # "#$argument_label=" here strips out the label leaving only the value
       if [[ $i == *"="* ]]
