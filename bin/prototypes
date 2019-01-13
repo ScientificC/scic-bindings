@@ -4,7 +4,20 @@
 
 variables["-ns"]="namespace";
 variables["-p"]="path"
+variables["-o"]="output"
 
 . ../scripts/flags-arguments.sh
 
-grep -RH --include "*.h" "$namespace\_.*(.*);" $path
+namespace=${namespace:-"scic"}
+path=${path:-"."}
+output=${output:-"."}
+
+if [ -d $output ]; then
+    output="$output/prototypes.txt"
+fi
+
+echo $namespace
+echo $path
+echo $output
+
+grep -RH --include "*.h" "$namespace\_.*(.*);" $path >> $output
