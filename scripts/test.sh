@@ -1,3 +1,5 @@
+#!/bin/bash
+
 . ./flags-declares.sh
 
 # any variables you want to use here
