@@ -1,0 +1,10 @@
+#!/bin/bash
+
+. ../scripts/flags-declares.sh
+
+variables["-ns"]="namespace";
+variables["-p"]="path"
+
+. ../scripts/flags-arguments.sh
+
+grep -RH --include "*.h" "$namespace\_.*(.*);" $path
